@@ -1,0 +1,116 @@
+@use "../base/variables" as *;
+
+// statistics секция
+.statistics {
+    text-transform: uppercase;
+    padding-top: 138px;
+
+    @media (max-width: $mobile) {
+        padding-top: 42px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        .item {
+            margin-bottom: -32px;
+            padding-bottom: 32px;
+            position: relative;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1184px;
+            margin-left: auto;
+
+            &.scale {
+                max-width: inherit;
+            }
+
+            .horizontal-line {
+                bottom: 32px;
+            }
+
+            .title {
+                font-size: 20px;
+                line-height: 131%;
+                margin-bottom: 55px;
+
+                @media (max-width: $mobile) {
+                    font-size: 12px;
+                    margin-bottom: 19px;
+                }
+            }
+
+            .counter {
+                display: flex;
+                align-items: center;
+                font-size: 151px;
+                line-height: 131%;
+                margin-bottom: 7px;
+
+                @media (max-width: $mobile) {
+                    font-size: 50px;
+                    margin-bottom: 5px;
+                }
+
+                svg {
+                    width: 68px;
+                    margin-left: 22px;
+                    transition: 0.15s;
+
+                    @media (max-width: $mobile) {
+                        width: 24px;
+                        margin-left: 12px;
+                    }
+                }
+
+                &._big {
+                    line-height: 0;
+                    font-size: 337px;
+                    margin-bottom: 92px;
+
+                    @media (max-width: $tablet) {
+                        font-size: 200px;
+                        margin-bottom: 62px;
+                    }
+
+                    @media (max-width: $mobile) {
+                        font-size: 70px;
+                        margin-bottom: 26px;
+                    }
+
+                    span {
+                        position: relative;
+                        top: 10px;
+
+                        @media (max-width: $tablet) {
+                            top: 6px;
+                        }
+
+                        @media (max-width: $mobile) {
+                            top: 3px;
+                        }
+                    }
+
+                    svg {
+                        width: 174px;
+                        margin-left: 46px;
+
+                        @media (max-width: $tablet) {
+                            width: 116px;
+                            margin-left: 30px;
+                        }
+
+                        @media (max-width: $mobile) {
+                            width: 36px;
+                            margin-left: 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

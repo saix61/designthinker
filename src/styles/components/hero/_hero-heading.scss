@@ -1,0 +1,53 @@
+@use '../../base/variables' as *;
+
+.hero-heading {
+    padding: 54px 16px 16px 55px;
+
+    @media (max-width: $tablet) {
+        padding-left: 23px;
+        padding-top: 60px;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 0;
+    }
+
+    .subtitle {
+        color: $text-secondary;
+        line-height: 131%;
+        font-size: 23px;
+        margin-bottom: 26px;
+
+        @media (max-width: $tablet) {
+            font-size: 16px;
+        }
+
+        @media (max-width: $mobile) {
+            position: absolute;
+            top: 170px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 54px;
+            line-height: 98%;
+            z-index: -1;
+            opacity: 0.02;
+            transform: translateY(-50%);
+            max-width: 500px;
+        }
+    }
+
+    .title {
+        font-size: 60px;
+        line-height: 105%;
+
+        @media (max-width: $tablet) {
+            font-size: 40px;
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 30px;
+        }
+    }
+}

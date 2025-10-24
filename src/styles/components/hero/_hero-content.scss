@@ -1,0 +1,64 @@
+@use '../../base/variables' as *;
+
+.hero-content {
+    padding: 50px 24px 50px 60px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+        padding: 18px 16px 21px 24px;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 0;
+    }
+
+    .heading {
+        font-family: $font-family-second;
+        font-weight: 300;
+        line-height: 168%;
+        margin-bottom: 32px;
+        max-width: 430px;
+
+        @media (max-width: $tablet) {
+            font-size: 14px;
+            max-width: 380px;
+        }
+
+        @media (max-width: $mobile) {
+            text-align: center;
+            margin: 24px auto 0;
+            font-size: 12px;
+            max-width: 250px;
+        }
+    }
+
+    .descript {
+        position: relative;
+
+        p {
+            font-family: $font-family-second;
+            font-size: 22px;
+            line-height: 138%;
+            max-width: 630px;
+            opacity: 0;
+
+            @media (max-width: $tablet) {
+                font-size: 14px;
+                max-width: 330px;
+            }
+
+            @media (max-width: $mobile) {
+                max-width: 100%;
+            }
+
+            &.typewriter {
+                opacity: 1;
+                position: absolute;
+                inset: 0;
+            }
+        }
+    }
+}

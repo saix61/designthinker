@@ -1,0 +1,43 @@
+@use "../base/variables" as *;
+
+._anm-fade-top {
+    transform: translateY(-20px);
+    transition: $anm-transition 0s;
+    opacity: 0;
+}
+
+._anm-fade-bottom {
+    transform: translateY(20px);
+    transition: $anm-transition 0s;
+    opacity: 0;
+}
+
+._anm-fade-left {
+    transform: translateX(-20px);
+    transition: $anm-transition 0s;
+    opacity: 0;
+}
+
+._anm-fade-right {
+    transform: translateX(20px);
+    transition: $anm-transition 0s;
+    opacity: 0;
+}
+
+._anm-fade-top._active,
+._anm-fade-bottom._active,
+._anm-fade-left._active,
+._anm-fade-right._active,
+._active ._anm-fade-top,
+._active ._anm-fade-bottom,
+._active ._anm-fade-left,
+._active ._anm-fade-right {
+    transform: translate(0);
+    opacity: 1;
+}
+
+@for $i from 1 through 30 {
+    html body *[data-delay="#{$i}"] {
+        transition-delay: #{$i * 0.05}s;
+    }
+}

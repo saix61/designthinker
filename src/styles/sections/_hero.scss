@@ -1,0 +1,128 @@
+@use "../base/variables" as *;
+
+@use "../components/hero/author";
+@use "../components/hero/hero-heading";
+@use "../components/hero/behance";
+@use "../components/hero/hero-gif";
+@use "../components/hero/hero-content";
+@use "../components/hero/hero-video";
+
+// hero секция
+.hero {
+    height: 100vh;
+    max-height: 962px;
+    position: relative;
+    z-index: 0;
+
+    @media (max-width: $tablet) {
+        max-height: 730px;
+    }
+
+    @media (max-width: $mobile) {
+        height: auto;
+        max-height: inherit;
+    }
+
+    &__fixed {
+        max-height: calc(962px - 128px);
+        position: fixed;
+        top: 128px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $tablet) {
+            max-height: calc(730px - 128px);
+        }
+
+        @media (max-width: $mobile) {
+            position: relative;
+            top: 0;
+            max-height: inherit;
+            padding: 62px $side-screen-space-sm 30px;
+        }
+    }
+
+    &__row {
+        display: flex;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+
+        &._top {
+            flex: 450px;
+            border-bottom: 1px solid $color-line;
+            text-transform: uppercase;
+
+            @media (max-width: $tablet) {
+                flex: 340px;
+            }
+
+            @media (max-width: $mobile) {
+                border: none;
+                flex: auto;
+            }
+        }
+
+        &._bottom {
+            flex: 390px;
+            transition: 0.15s ease-in-out;
+
+            @media (max-width: $tablet) {
+                flex: 265px;
+            }
+
+            @media (max-width: $mobile) {
+                flex: auto;
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__coll {
+        position: relative;
+        transition: 0.15s ease-in-out 0.15s;
+
+        @media (max-width: $mobile) {
+            position: inherit;
+        }
+
+        &._left {
+            flex: 412px;
+            min-width: 200px;
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: $mobile) {
+                flex: none;
+            }
+        }
+
+        &._center {
+            flex: 868px;
+            max-width: 868px;
+            border-left: 1px solid $color-line;
+            border-right: 1px solid $color-line;
+
+            @media (max-width: $mobile) {
+                border: none;
+                flex: none;
+            }
+        }
+
+        &._right {
+            flex: 640px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+
+            @media (max-width: $mobile) {
+                flex: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@use "../base/variables" as *;
+
+// footer секция
+.footer {
+    text-transform: uppercase;
+    padding-top: 36px;
+    padding-bottom: 35px;
+    background-color: $color-gray;
+
+    .descript svg {
+        width: 100%;
+        height: auto;
+    }
+}

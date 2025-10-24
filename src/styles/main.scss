@@ -1,0 +1,19 @@
+// Базовые стили
+@use "base/typography";
+@use "base/reset";
+@use "base/anm";
+
+@use "components/preloader";
+@use "components/header";
+@use "components/anm-slide-up";
+@use "components/anm-fixed";
+@use "components/footer";
+
+@use "sections/hero";
+@use "sections/portfolio";
+@use "sections/statistics";
+@use "sections/about";
+@use "sections/expirience";
+@use "sections/example";
+@use "sections/video-block";
+@use "sections/contact";

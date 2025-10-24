@@ -1,0 +1,16 @@
+{
+  "name": "designer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src/styles/main.scss dist/styles/main.css --style compressed",
+    "dev": "sass --trace --watch src/styles/main.scss:dist/styles/main.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

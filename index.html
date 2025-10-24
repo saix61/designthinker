@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link rel="preload" href="./font/HeadingProWide-Light.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./font/HeadingProWide-Book.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./font/HeadingProWide-Bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./font/VipnagorgiallaRg-Regular.woff2" as="font" type="font/woff2">
+
+
+  <link rel="stylesheet" href="dist/styles/main.css" />
+</head>
+
+<body style="overflow: hidden;">
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">Design thinker</div>
+        <div class="header__logo_mobile">D.t</div>
+        <div class="header__list">
+          <div class="header__item">
+            <a href="#portfolio" class="link">
+              <div>portfolio</div>
+              <div>portfolio</div>
+            </a>
+          </div>
+          <div class="header__item _mobile-hide">
+            <a href="#about" class="link">
+              <div>about</div>
+              <div>about</div>
+            </a>
+          </div>
+        </div>
+        <a href="" class="link header__contact">
+          <div>contact</div>
+          <div>contact</div>
+        </a>
+      </div>
+    </header>
+
+    <section class="hero _bg">
+      <div class="hero__fixed container_xl">
+        <div class="hero__row _top">
+          <div class="hero__coll _left">
+            <img src="./img/author.png" alt="" class="author _anm-fade-left js-anm-scroll" />
+          </div>
+          <div class="hero__coll _center">
+            <div class="hero-heading">
+              <div class="subtitle _anm-fade-top js-anm-scroll">Human-centered</div>
+              <h1 class="title">
+                <div class="anm-slide-up js-anm-scroll">
+                  <span data-delay="0">P</span>
+                  <span data-delay="1">r</span>
+                  <span data-delay="2">o</span>
+                  <span data-delay="3">d</span>
+                  <span data-delay="4">u</span>
+                  <span data-delay="5">c</span>
+                  <span data-delay="6">t</span>
+                </div>
+                <div class="anm-slide-up js-anm-scroll">
+                  <span data-delay="0">U</span>
+                  <span data-delay="1">X</span>
+                  <span data-delay="2">/</span>
+                  <span data-delay="3">U</span>
+                  <span data-delay="4">I</span>
+                  <span data-delay="0">&nbsp;</span>
+                  <span data-delay="5">d</span>
+                  <span data-delay="6">e</span>
+                  <span data-delay="7">s</span>
+                  <span data-delay="8">i</span>
+                  <span data-delay="9">g</span>
+                  <span data-delay="10">n</span>
+                </div>
+              </h1>
+            </div>
+          </div>
+          <div class="hero__coll _right">
+            <a href="" class="behance _anm-fade-right js-anm-scroll">
+              <div class="behance__content">
+                <div class="behance__icon">
+                  <svg viewBox="0 0 54 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M41.7342 8.30534C29.0464 8.30534 29.0297 20.7735 29.0297 20.8377C29.0297 20.8377 28.1604 33.3242 41.7342 33.3242C41.7342 33.3242 53.0539 33.9595 53.0539 24.6369H47.2405C47.2405 24.6369 47.4266 28.146 41.9278 28.146C41.1536 28.2104 40.3744 28.1085 39.644 27.8472C38.9135 27.5859 38.2492 27.1715 37.6968 26.6325C37.1444 26.0935 36.717 25.4428 36.4442 24.7252C36.1713 24.0075 36.0595 23.24 36.1163 22.4756H53.2419C53.2419 22.4756 55.1313 8.30534 41.7342 8.30534ZM36.0512 18.1054C36.2467 16.7191 36.9419 15.4486 38.0095 14.5266C39.0771 13.6047 40.4457 13.0929 41.8646 13.0851C42.5357 13.066 43.2036 13.1831 43.8269 13.4292C44.4502 13.6752 45.0157 14.045 45.4882 14.5155C45.9606 14.9861 46.33 15.5474 46.5735 16.1646C46.817 16.7818 46.9293 17.4417 46.9036 18.1035L36.0512 18.1054ZM21.5317 14.8975C23.0313 14.7253 24.4015 13.9766 25.345 12.8139C26.2884 11.6512 26.7288 10.1684 26.5707 8.68728C26.5707 2.85903 22.4494 0 17.2168 0H0V32.6374H17.2112C17.2112 32.6374 27.7248 32.9551 27.7248 22.9971C27.7248 22.9971 28.1771 14.8956 21.5279 14.8956L21.5317 14.8975ZM7.58737 5.79702H17.2149C17.2149 5.79702 19.5492 5.79703 19.5492 9.19592C19.5492 12.5948 18.181 13.0869 16.6192 13.0869H7.58364L7.58737 5.79702ZM16.7346 26.8312H7.58364V18.1035H17.2112C17.2112 18.1035 20.7052 18.0723 20.6903 22.5987C20.6903 26.4107 18.0991 26.8092 16.7346 26.8312ZM34.6216 1.91153V5.93107H48.2755V1.92071L34.6216 1.91153Z"
+                      fill="#FAFAFA" />
+                  </svg>
+                </div>
+                <div class="behance__text">Portfolio</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__row _bottom">
+          <div class="hero__coll _left">
+            <div class="hero-gif">
+              <div class="hero-gif__wrapper">
+                <img src="./img/gif.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="hero__coll _center">
+            <div class="hero-content">
+              <p class="heading _mobile-hide _anm-fade-bottom js-anm-scroll">
+                Hi, I'm Lev. My goal is to define design tasks and strategies
+                for specific products...
+              </p>
+              <div class="descript _anm-fade-bottom js-anm-scroll">
+                <p class="typewriter"></p>
+                <p>Aesthetics and convenience are the main parameters that
+                  influence global trends and step by step changing the world
+                  for the better.</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero__coll _right">
+            <div class="hero-video js-anm-scroll">
+              <video loop muted autoplay="autoplay" src="video.mp4"></video>
+            </div>
+          </div>
+          <div class="hero-content _desc-hide">
+            <p class="heading _anm-fade-bottom js-anm-scroll">
+              Hi, I'm Lev. My goal is to define design tasks and strategies
+              for specific products...
+            </p>
+          </div>
+        </div>
+    </section>
+
+    <div class="_bg">
+      <section id="portfolio" class="portfolio">
+        <div class="container">
+          <div class="heading">
+            <div class="anm-fixed js-anm-scroll">
+              <div class="anm-fixed__content">
+                <div class="anm-slide-up js-anm-scroll">
+                  <span data-delay="4">p</span>
+                  <span data-delay="3">o</span>
+                  <span data-delay="2">r</span>
+                  <span data-delay="1">t</span>
+                  <span data-delay="0">f</span>
+                  <span data-delay="1">o</span>
+                  <span data-delay="2">l</span>
+                  <span data-delay="3">i</span>
+                  <span data-delay="4">o</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-list js-anm-scroll">
+            <a href="" class="portfolio-list__item">
+              <div class="draw draw01">
+                <img src="./img/portfolio01and1920.jpg" alt="">
+              </div>
+            </a>
+            <a href="" class="portfolio-list__item">
+              <div class="draw draw02">
+                <img src="./img/portfolio02and1920.jpg" alt="">
+              </div>
+            </a>
+            <a href="" class="portfolio-list__item">
+              <div class="draw draw03">
+                <img src="./img/portfolio03and1920.jpg" alt="">
+              </div>
+            </a>
+            <a href="" class="portfolio-list__item">
+              <div class="draw draw04">
+                <img src="./img/portfolio04and1920.jpg" alt="">
+              </div>
+            </a>
+            <a href="" class="portfolio-list__item">
+              <div class="draw draw05">
+                <img src="./img/portfolio05and1920.jpg" alt="">
+              </div>
+            </a>
+            <a href="" class="portfolio-list__item">
+              <div class="draw draw06">
+                <img src="./img/portfolio06and1920.jpg" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="statistics">
+        <div class="container">
+          <div class="statistics__list">
+            <div class="item scale js-anm-scroll">
+              <h2 class="title _anm-fade-bottom" data-delay="4">projects <br>completed</h2>
+              <div class="counter _big _anm-fade-bottom js-counter" data-count="100" data-delay="4">
+                <span>0</span>
+                <svg viewBox="0 0 174 174" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M99.2232 174H74.7768V99.2231H0V74.7769H74.7768V0H99.2232V74.7769H174V99.2231H99.2232V174Z" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="horizontal-line"></div>
+            </div>
+            <div class="item js-anm-scroll">
+              <div class="title _anm-fade-bottom" data-delay="4">years of <br>experience in <br>Ux/Ui design</div>
+              <div class="counter _anm-fade-bottom" data-delay="4">
+                <span>6</span>
+                <svg viewBox="0 0 174 174" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M99.2232 174H74.7768V99.2231H0V74.7769H74.7768V0H99.2232V74.7769H174V99.2231H99.2232V174Z" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="horizontal-line"></div>
+            </div>
+            <div class="item js-anm-scroll">
+              <div class="title _anm-fade-bottom" data-delay="4">years of <br>experience <br>in design</div>
+              <div class="counter _anm-fade-bottom" data-delay="4">
+                <span>14</span>
+                <svg viewBox="0 0 174 174" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M99.2232 174H74.7768V99.2231H0V74.7769H74.7768V0H99.2232V74.7769H174V99.2231H99.2232V174Z" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="horizontal-line"></div>
+            </div>
+            <div class="item js-anm-scroll">
+              <div class="title _anm-fade-bottom" data-delay="4">satisfied <br>clients / <br>organization</div>
+              <div class="counter _anm-fade-bottom" data-delay="4">
+                <span>70</span>
+                <svg viewBox="0 0 174 174" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M99.2232 174H74.7768V99.2231H0V74.7769H74.7768V0H99.2232V74.7769H174V99.2231H99.2232V174Z" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="horizontal-line"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="heading _anm-fade-left js-anm-scroll">about</h2>
+          <div class="about-list">
+            <div class="about-list__item">
+              <p class="title">
+                Immersion in the product <span>at the owner level</span>
+              </p>
+              <div class="descript">
+                <p>Immersing myself in the product allows me to experience and feel the entire functional architecture process, create the right hypotheses, and identify problems, which enables me to see the product as a whole at the design stage, identify priorities, technological
+                  limitations, and a
+                  strategy for product growment.</p>
+              </div>
+              <img src="img/scaling.svg" alt="" class="drawing" />
+              <div class="plus"></div>
+            </div>
+            <div class="about-list__item">
+              <p class="title">Justified design <span>solution</span></p>
+              <div class="descript">
+                <p>Convenient interface design based on user needs, business goals, and competitor analysis. When modern design solutions rely on patterns, visual accents, composition, minimalism, and typography, such a digital product begins to attract more attention and becomes
+                  trendy.</p>
+              </div>
+              <img src="img/brush.svg" alt="" class="drawing" />
+              <div class="plus"></div>
+            </div>
+            <div class="about-list__item">
+              <p class="title">
+                create products under <span>a unified ecosystem</span>
+              </p>
+              <div class="descript">
+                <p>Consistent and systematic design always attracts attention with its convenience, where you can define a unified strategy for growing a visual style, allowing you to create a unified user path between products. Well-thought-out navigation and structure give a sense of
+                  reliability and
+                  professionalism.</p>
+              </div>
+              <img src="img/minibus.svg" alt="" class="drawing" />
+              <div class="plus"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expirience">
+        <div class="container">
+          <h2 class="heading _anm-fade-bottom js-anm-scroll" data-delay="4">primary experience</h2>
+          <div class="list">
+            <div class="item one js-anm-scroll">
+              <p class="position _anm-fade-bottom" data-delay="4">Freelancer</p>
+              <div class="info _anm-fade-bottom" data-delay="4">
+                <p class="status">UX/UI product designer</p>
+                <p class="date">2022 - to day</p>
+              </div>
+              <div class="text">
+                <p class="_anm-fade-bottom" data-delay="4">
+                  During this time, and now i create participated in many
+                  interesting projects, including FinTech, CRM corporate
+                  websites, cross-platform applications, and others...
+                </p>
+                <br>
+                <p class="_anm-fade-bottom" data-delay="6">
+                  One of the most interesting digital products would be Gamo -
+                  digital space for sports booking
+                </p>
+              </div>
+              <div class="horizontal-line"></div>
+            </div>
+            <div class="item two js-anm-scroll">
+              <p class="position _anm-fade-bottom" data-delay="4">orangebunch</p>
+              <div class="info _anm-fade-bottom" data-delay="4">
+                <p class="status">UX/UI designer (senior)</p>
+                <p class="date">2021 - 2022</p>
+              </div>
+              <div class="text">
+                <p class="_anm-fade-bottom" data-delay="4">
+                  During this time, I created user-friendly interfaces and web
+                  pages, worked with a friendly and experienced team on a
+                  cryptocurrency exchange, analyzed competitors, developed
+                  strategies, and adapted design processes...
+                </p>
+              </div>
+              <div class="horizontal-line"></div>
+            </div>
+            <div class="item three js-anm-scroll">
+              <p class="position _anm-fade-bottom" data-delay="4">Scripta IT</p>
+              <div class="info _anm-fade-bottom" data-delay="4">
+                <p class="status">UX/UI designer (senior)</p>
+                <p class="date">2020 - 2021</p>
+              </div>
+              <div class="text">
+                <p class="_anm-fade-bottom" data-delay="4">
+                  Worked on interesting projects as part of a team with
+                  developers and analysts, tested functionality using
+                  hypotheses, created UI kits, adapted projects for different
+                  platforms, and developed a consistent style for each project.
+                </p>
+              </div>
+              <div class="horizontal-line"></div>
+            </div>
+            <div class="item scarcity four js-anm-scroll">
+              <p class="position _anm-fade-bottom" data-delay="4">geostat & Freelancer</p>
+              <div class="info _anm-fade-bottom" data-delay="4">
+                <p class="status">UX/UI & digital designer</p>
+                <p class="date">2018 - 2020</p>
+              </div>
+              <div class="text">
+                <p class="_anm-fade-bottom" data-delay="4">
+                  I Created modern and user-friendly interfaces for portals,
+                  provided consulting on website design, interactive
+                  presentation design, digital design, applied best practices in
+                  visual design... and much more.
+                </p>
+              </div>
+              <div class="horizontal-line"></div>
+            </div>
+          </div>
+          <div class="button">and more than 10 years</div>
+        </div>
+      </section>
+
+      <section class="example">
+        <div class="container">
+          <div class="example__row">
+            <div class="arrow _anm-fade-left js-anm-scroll">
+              <svg height="38" viewBox="0 0 113 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M93.8297 36.1355L111.397 18.5678M111.397 18.5678L93.8297 1.00007M111.397 18.5678L1.00081 18.568" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path d="M93.8297 36.1355L111.397 18.5678M111.397 18.5678L93.8297 1.00007M111.397 18.5678L1.00081 18.568" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="heading">
+              <div class="anm-slide-up js-anm-scroll">
+                <span data-delay="0">T</span>
+                <span data-delay="1">h</span>
+                <span data-delay="2">e</span>
+                <span data-delay="3">&nbsp;</span>
+                <span data-delay="4">d</span>
+                <span data-delay="5">i</span>
+                <span data-delay="6">f</span>
+                <span data-delay="7">f</span>
+                <span data-delay="8">e</span>
+                <span data-delay="9">r</span>
+                <span data-delay="10">e</span>
+                <span data-delay="11">n</span>
+                <span data-delay="12">c</span>
+                <span data-delay="13">e</span>
+              </div>
+              <div class="anm-slide-up js-anm-scroll">
+                <span data-delay="0">b</span>
+                <span data-delay="1">e</span>
+                <span data-delay="2">t</span>
+                <span data-delay="3">w</span>
+                <span data-delay="4">e</span>
+                <span data-delay="5">e</span>
+                <span data-delay="6">n</span>
+                <span data-delay="7">&nbsp;</span>
+                <span data-delay="8">m</span>
+                <span data-delay="9">o</span>
+                <span data-delay="10">d</span>
+                <span data-delay="11">e</span>
+                <span data-delay="12">r</span>
+                <span data-delay="13">n</span>
+                <span data-delay="14">&nbsp;</span>
+                <span data-delay="15">d</span>
+                <span data-delay="16">e</span>
+                <span data-delay="17">s</span>
+                <span data-delay="18">i</span>
+                <span data-delay="19">g</span>
+                <span data-delay="20">n</span>
+              </div>
+              <div class="anm-slide-up js-anm-scroll">
+                <span data-delay="0">a</span>
+                <span data-delay="1">n</span>
+                <span data-delay="2">d</span>
+                <span data-delay="3">&nbsp;</span>
+                <span data-delay="4">s</span>
+                <span data-delay="5">t</span>
+                <span data-delay="6">a</span>
+                <span data-delay="7">n</span>
+                <span data-delay="8">d</span>
+                <span data-delay="9">a</span>
+                <span data-delay="10">r</span>
+                <span data-delay="11">d</span>
+                <span data-delay="12">&nbsp;</span>
+                <span data-delay="13">s</span>
+                <span data-delay="14">o</span>
+                <span data-delay="15">l</span>
+                <span data-delay="16">u</span>
+                <span data-delay="17">t</span>
+                <span data-delay="18">i</span>
+                <span data-delay="19">o</span>
+                <span data-delay="20">n</span>
+                <span data-delay="21">s</span>
+              </div>
+            </div>
+            <img class="example__img js-anm-scroll" src="./img/frame_1321315067.png" alt="">
+          </div>
+          <div class="underline-content js-anm-scroll">
+            <div class="horizontal-line"></div>
+            <p class="small _anm-fade-bottom" data-delay="4">For example</p>
+            <p class="descript _anm-fade-bottom" data-delay="4">
+              A comfortable and modern design is similar to
+              <b>Ferrari</b>. Any car can take you to your destination,
+              but only Ferrari will give you a&nbsp;feeling of reliability,
+              confidence, comfort, and a rush of dopamine...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-block">
+        <video loop muted autoplay="autoplay" src="generalvideo.mp4" class="generalvideo"></video>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <a href="" class="portfolio-link js-anm-scroll">
+            <div class="heading _anm-fade-bottom">and just the same in design</div>
+            <div class="icon-n-text _anm-fade-bottom">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M28.3145 27.6362L28.3145 1.63623M28.3145 1.63623L2.31445 1.63623M28.3145 1.63623L2.31445 27.6362" stroke="white" stroke-width="3.27273" stroke-linecap="square" />
+                <path d="M28.3145 27.6362L28.3145 1.63623M28.3145 1.63623L2.31445 1.63623M28.3145 1.63623L2.31445 27.6362" stroke="#FAFAFA" stroke-width="3.27273" stroke-linecap="square" />
+              </svg>
+              <div class="text">portfolio</div>
+            </div>
+            <div class="horizontal-line"></div>
+          </a>
+          <div class="table">
+            <div class="left">
+              <h2 class="social-title _desc-hide">
+                <div class="anm-slide-up js-anm-scroll">
+                  <span data-delay="0">O</span>
+                  <span data-delay="1">n</span>
+                  <span data-delay="2">l</span>
+                  <span data-delay="3">y</span>
+                  <span data-delay="4">&nbsp;</span>
+                  <span data-delay="5">T</span>
+                  <span data-delay="6">o</span>
+                  <span data-delay="7">p</span>
+                  <span data-delay="8">&nbsp;</span>
+                  <span data-delay="9">D</span>
+                  <span data-delay="10">e</span>
+                  <span data-delay="11">s</span>
+                  <span data-delay="12">i</span>
+                  <span data-delay="13">g</span>
+                  <span data-delay="14">n</span>
+                </div>
+              </h2>
+              <div class="text">
+                <p class="descript _anm-fade-bottom js-anm-scroll">- Do not look at small advantages.</p>
+                <p class="descript _anm-fade-bottom js-anm-scroll">
+                  - Desire to have things done quickly prevents their being done
+                  thoroughly.
+                </p>
+                <p class="descript _anm-fade-bottom js-anm-scroll">
+                  - Looking at small advantages prevents great affairs from
+                  being accomplished.
+                </p>
+              </div>
+              <div class="menu">
+                <div class="list">
+                  <div class="item">
+                    <a href="" class="link _anm-fade-bottom js-anm-scroll">
+                      <span>portfolio</span>
+                      <span>portfolio</span>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="link _anm-fade-bottom js-anm-scroll">
+                      <span>contact</span>
+                      <span>contact</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="social">
+                <h2 class="social-title _mobile-hide">
+                  <div class="anm-slide-up js-anm-scroll">
+                    <span data-delay="0">O</span>
+                    <span data-delay="1">n</span>
+                    <span data-delay="2">l</span>
+                    <span data-delay="3">y</span>
+                    <span data-delay="4">&nbsp;</span>
+                    <span data-delay="5">T</span>
+                    <span data-delay="6">o</span>
+                    <span data-delay="7">p</span>
+                    <span data-delay="8">&nbsp;</span>
+                    <span data-delay="9">D</span>
+                    <span data-delay="10">e</span>
+                    <span data-delay="11">s</span>
+                    <span data-delay="12">i</span>
+                    <span data-delay="13">g</span>
+                    <span data-delay="14">n</span>
+                  </div>
+                </h2>
+                <div class="social-list">
+                  <a href="" class="social-list__link _anm-fade-bottom js-anm-scroll">
+                    <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M25.0406 4.9832C17.4279 4.9832 17.4178 12.4641 17.4178 12.5026C17.4178 12.5026 16.8962 19.9945 25.0406 19.9945C25.0406 19.9945 31.8323 20.3757 31.8323 14.7821H28.3443C28.3443 14.7821 28.456 16.8876 25.1567 16.8876C24.6922 16.9263 24.2246 16.8651 23.7864 16.7083C23.3481 16.5516 22.9495 16.3029 22.6181 15.9795C22.2866 15.6561 22.0302 15.2657 21.8665 14.8351C21.7028 14.4045 21.6357 13.944 21.6698 13.4854H31.9451C31.9451 13.4854 33.0788 4.9832 25.0406 4.9832ZM21.6307 10.8632C21.748 10.0314 22.1651 9.26915 22.8057 8.71598C23.4463 8.1628 24.2674 7.85575 25.1187 7.85105C25.5214 7.83959 25.9222 7.90986 26.2962 8.0575C26.6701 8.20514 27.0094 8.427 27.2929 8.70933C27.5764 8.99165 27.798 9.32842 27.9441 9.69874C28.0902 10.0691 28.1576 10.465 28.1421 10.8621L21.6307 10.8632ZM12.919 8.93848C13.8188 8.83518 14.6409 8.38596 15.207 7.68834C15.773 6.99073 16.0373 6.10102 15.9424 5.21237C15.9424 1.71542 13.4696 0 10.3301 0H0V19.5825H10.3267C10.3267 19.5825 16.6349 19.7731 16.6349 13.7983C16.6349 13.7983 16.9063 8.93738 12.9168 8.93738L12.919 8.93848ZM4.55242 3.47821H10.3289C10.3289 3.47821 11.7295 3.47822 11.7295 5.51755C11.7295 7.55689 10.9086 7.85215 9.97154 7.85215H4.55019L4.55242 3.47821ZM10.0408 16.0987H4.55019V10.8621H10.3267C10.3267 10.8621 12.4231 10.8434 12.4142 13.5592C12.4142 15.8464 10.8595 16.0855 10.0408 16.0987ZM20.7729 1.14692V3.55864H28.9653V1.15243L20.7729 1.14692Z"
+                        fill="#FAFAFA" />
+                    </svg>
+                  </a>
+                  <a href="" class="social-list__link _anm-fade-bottom js-anm-scroll">
+                    <svg width="31" height="26" viewBox="0 0 31 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2.13041 11.1928C10.4491 7.52361 15.9963 5.10462 18.7717 3.93597C26.6964 0.599081 28.3431 0.0193849 29.4163 0.000200844C29.6524 -0.0039745 30.1802 0.0552709 30.522 0.336148C31.0292 0.75278 31.0321 1.65714 30.9758 2.25568C30.5463 6.82373 28.6882 17.9091 27.7428 23.0253C27.3428 25.1902 26.5551 25.9161 25.7927 25.9871C24.1356 26.1415 22.8773 24.8784 21.2723 23.8133C18.7608 22.1466 17.3419 21.1091 14.904 19.4827C12.0867 17.6031 13.9131 16.5701 15.5186 14.8818C15.9389 14.44 23.2401 7.7167 23.3814 7.10676C23.3992 7.03047 23.4156 6.7461 23.2487 6.59601C23.0818 6.44592 22.8356 6.49715 22.6579 6.53801C22.406 6.5959 18.3938 9.28064 10.6214 14.5921C9.48258 15.3839 8.45106 15.7696 7.52688 15.7494C6.50796 15.7272 4.54814 15.1662 3.09115 14.6867C1.3041 14.0987 -0.116215 13.7876 0.00751357 12.789C0.0719417 12.2686 0.779536 11.7367 2.13041 11.1928Z"
+                        fill="#FAFAFA" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom">
+                <a href="mailto:adobe.web77@gmail.com" class="mail link _anm-fade-bottom js-anm-scroll">
+                  <span>adobe.web77@gmail.com</span>
+                  <span>adobe.web77@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <p class="descript _anm-fade-bottom js-anm-scroll">
+            <svg width="1769" height="59" viewBox="0 0 1769 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1768.97 58.829H1706.04V0H1768.97V8.366H1718.24V25.365H1749.12V33.286H1718.24V50.463H1768.97V58.829Z" fill="#3A3A3A" />
+              <path d="M1689.22 58.829H1677.21L1636.44 15.931V58.829H1624.87V0H1637.69L1677.56 43.877V0H1689.22V58.829Z" fill="#3A3A3A" />
+              <path d="M1608.04 58.829H1595.94V0H1608.04V58.829Z" fill="#3A3A3A" />
+              <path d="M1579.11 58.829H1567.9V15.575L1545.02 58.829H1534.08L1511.2 15.575V58.829H1500.08V0H1513.79L1539.95 46.903L1566.3 0H1579.11V58.829Z" fill="#3A3A3A" />
+              <path d="M1473.72 58.829L1468.56 47.081H1434.39L1429.31 58.829H1415.96L1443.64 0H1458.95L1486.63 58.829H1473.72ZM1451.39 8.099L1437.95 38.982H1465L1451.39 8.099Z" fill="#3A3A3A" />
+              <path d="M1393.18 37.914H1361.14V58.829H1348.95V0H1393.18C1408.94 0 1414.1 2.403 1414.1 14.062V23.852C1414.1 35.6 1408.67 37.914 1393.18 37.914ZM1401.99 21.627V16.465C1401.99 10.057 1399.32 8.366 1391.05 8.366H1361.14V29.815H1391.05C1399.32 29.815 1401.99 28.213 1401.99 21.627Z"
+                fill="#3A3A3A" />
+              <path
+                d="M1311.75 58.829H1284.25C1268.67 58.829 1263.51 56.426 1263.51 44.767V14.062C1263.51 2.314 1268.85 0 1284.25 0H1311.75C1327.32 0 1332.66 2.314 1332.66 14.062V44.767C1332.66 56.515 1327.32 58.829 1311.75 58.829ZM1320.65 42.364V16.554C1320.65 9.879 1317.71 8.366 1308.63 8.366H1287.54C1278.64 8.366 1275.62 9.79 1275.62 16.554V42.364C1275.62 48.861 1278.29 50.463 1287.54 50.463H1308.63C1317.71 50.463 1320.65 48.95 1320.65 42.364Z"
+                fill="#3A3A3A" />
+              <path d="M1226.58 58.829H1182.35V0H1226.58C1241.98 0 1247.5 2.403 1247.5 14.062V44.767C1247.5 56.337 1242.34 58.829 1226.58 58.829ZM1235.39 42.364V16.554C1235.39 10.057 1232.46 8.366 1223.47 8.366H1194.54V50.463H1223.47C1232.19 50.463 1235.39 48.772 1235.39 42.364Z" fill="#3A3A3A" />
+              <path d="M1107.24 58.829H1095.14V34.799L1067.55 0H1081.7L1101.28 26.255L1120.95 0H1134.75L1107.24 34.799V58.829Z" fill="#3A3A3A" />
+              <path d="M1054.37 58.829H1043.16V15.575L1020.29 58.829H1009.34L986.466 15.575V58.829H975.341V0H989.047L1015.21 46.903L1041.56 0H1054.37V58.829Z" fill="#3A3A3A" />
+              <path
+                d="M909.818 58.829H861.046V50.463H907.148C912.844 50.463 914.446 48.683 914.446 44.055V39.16C914.446 35.422 912.31 33.464 907.949 33.464H874.93C865.407 33.464 860.512 29.192 860.512 22.25V12.638C860.512 3.471 863.716 0 876.977 0H922.1V8.366H879.38C873.506 8.366 871.904 10.235 871.904 14.774V19.491C871.904 23.229 874.04 25.187 878.579 25.187H911.331C921.299 25.187 925.838 29.637 925.838 37.291V46.102C925.838 55.091 922.011 58.829 909.818 58.829Z"
+                fill="#3A3A3A" />
+              <path d="M844.926 58.829H832.822V0H844.926V58.829Z" fill="#3A3A3A" />
+              <path d="M781.588 58.829H769.573L728.811 15.931V58.829H717.241V0H730.057L769.929 43.877V0H781.588V58.829Z" fill="#3A3A3A" />
+              <path d="M700.601 58.829H656.279C640.437 58.829 635.453 56.159 635.453 44.767V14.062C635.453 2.848 640.348 0 656.279 0H700.601V8.366H659.483C650.049 8.366 647.468 10.146 647.468 16.554V42.364C647.468 48.772 650.227 50.463 659.483 50.463H688.942V33.375H662.42V25.098H700.601V58.829Z"
+                fill="#3A3A3A" />
+              <path d="M618.978 58.829H606.874V0H618.978V58.829Z" fill="#3A3A3A" />
+              <path
+                d="M575.762 58.829H526.99V50.463H573.092C578.788 50.463 580.39 48.683 580.39 44.055V39.16C580.39 35.422 578.254 33.464 573.893 33.464H540.874C531.351 33.464 526.456 29.192 526.456 22.25V12.638C526.456 3.471 529.66 0 542.921 0H588.044V8.366H545.324C539.45 8.366 537.848 10.235 537.848 14.774V19.491C537.848 23.229 539.984 25.187 544.523 25.187H577.275C587.243 25.187 591.782 29.637 591.782 37.291V46.102C591.782 55.091 587.955 58.829 575.762 58.829Z"
+                fill="#3A3A3A" />
+              <path d="M512.322 58.829H449.399V0H512.322V8.366H461.592V25.365H492.475V33.286H461.592V50.463H512.322V58.829Z" fill="#3A3A3A" />
+              <path d="M412.114 58.829H367.881V0H412.114C427.511 0 433.029 2.403 433.029 14.062V44.767C433.029 56.337 427.867 58.829 412.114 58.829ZM420.925 42.364V16.554C420.925 10.057 417.988 8.366 408.999 8.366H380.074V50.463H408.999C417.721 50.463 420.925 48.772 420.925 42.364Z"
+                fill="#3A3A3A" />
+              <path d="M296.184 58.829H251.951V0H296.184C311.581 0 317.099 2.403 317.099 14.062V44.767C317.099 56.337 311.937 58.829 296.184 58.829ZM304.995 42.364V16.554C304.995 10.057 302.058 8.366 293.069 8.366H264.144V50.463H293.069C301.791 50.463 304.995 48.772 304.995 42.364Z"
+                fill="#3A3A3A" />
+              <path
+                d="M214.751 58.829H187.25C171.675 58.829 166.513 56.426 166.513 44.767V14.062C166.513 2.314 171.853 0 187.25 0H214.751C230.326 0 235.666 2.314 235.666 14.062V44.767C235.666 56.515 230.326 58.829 214.751 58.829ZM223.651 42.364V16.554C223.651 9.879 220.714 8.366 211.636 8.366H190.543C181.643 8.366 178.617 9.79 178.617 16.554V42.364C178.617 48.861 181.287 50.463 190.543 50.463H211.636C220.714 50.463 223.651 48.95 223.651 42.364Z"
+                fill="#3A3A3A" />
+              <path
+                d="M129.67 58.829H102.169C86.5935 58.829 81.4315 56.426 81.4315 44.767V14.062C81.4315 2.314 86.7715 0 102.169 0H129.67C145.245 0 150.585 2.314 150.585 14.062V44.767C150.585 56.515 145.245 58.829 129.67 58.829ZM138.57 42.364V16.554C138.57 9.879 135.633 8.366 126.555 8.366H105.462C96.5615 8.366 93.5355 9.79 93.5355 16.554V42.364C93.5355 48.861 96.2055 50.463 105.462 50.463H126.555C135.633 50.463 138.57 48.95 138.57 42.364Z"
+                fill="#3A3A3A" />
+              <path d="M65.148 58.829H20.826C4.984 58.829 0 56.159 0 44.767V14.062C0 2.848 4.895 0 20.826 0H65.148V8.366H24.03C14.596 8.366 12.015 10.146 12.015 16.554V42.364C12.015 48.772 14.774 50.463 24.03 50.463H53.489V33.375H26.967V25.098H65.148V58.829Z" fill="#3A3A3A" />
+            </svg>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div class="preloader js-preloader">
+    <div class="container">
+      <div class="title">
+        <span class="_anm-fade-top" data-delay="5">digital</span>
+      </div>
+      <div class="text-wrapper">
+        <div class="text _anm-fade-bottom" data-delay="5" id="animated-text">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./src/scripts/main.js"></script>
+</body>
+
+</html>

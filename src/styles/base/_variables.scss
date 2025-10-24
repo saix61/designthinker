@@ -1,0 +1,59 @@
+// base/_variables.scss
+
+$anm-transition: 0.35s ease-out;
+
+// Цвета
+$color-gray: #272727;
+$color-bg-preloader: #121212;
+$color-bg: #1f1f1f;
+$color-line: #353535;
+$color-horizontal-line: #4e4e4e;
+$color-horizontal-line-hovered: #F2F2F2;
+$color-dark: #252525;
+$color-button: #242424;
+$color-button-border: #303030;
+$color-about-card: #2B2B2B;
+
+$text-primary: #FAFAFA;
+$text-secondary: #E9E9E9;
+
+// Отступы и размеры
+$side-screen-space-xl: 64px;
+$side-screen-space-md: 32px;
+$side-screen-space-sm: 16px;
+
+
+$color-primary: #1a1a1a;
+$color-secondary: #E9E9E9;
+$color-accent: #ff6b3b;
+$color-success: #4caf50;
+
+
+// Шрифты
+$font-family-primary: "Vipnagorgialla", sans-serif;
+$font-family-second: "Heading Pro Wide", sans-serif;
+
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+// Отступы и размеры
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Радиусы скругления
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+
+// Тени
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 8px 12px rgba(0, 0, 0, 0.2);
+
+// Медиа-точки
+$mobile: 768px;
+$tablet: 1440px;
+$desktop: 1920px;

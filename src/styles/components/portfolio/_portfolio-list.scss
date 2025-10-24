@@ -1,0 +1,38 @@
+@use "../../base/variables" as *;
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    @media (max-width: $tablet) {
+        gap: 24px;
+    }
+
+    @media (max-width: $mobile) {
+        gap: 16px;
+    }
+
+    &__item {
+        flex-basis: calc(33.33% - 21.33px);
+
+        @media (max-width: $tablet) {
+            flex-basis: calc(33.33% - 16px);
+        }
+
+        @media (max-width: $mobile) {
+            flex-basis: calc(50% - 8px);
+        }
+
+        img {
+            width: 100%;
+            transition: $anm-transition;
+        }
+
+        &:hover {
+            img {
+                transform: translateY(-20px);
+            }
+        }
+    }
+}

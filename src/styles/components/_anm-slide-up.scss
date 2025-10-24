@@ -1,0 +1,20 @@
+@use "../base/variables" as *;
+
+.anm-slide-up {
+    display: flex;
+    overflow: hidden;
+
+    @media (max-width: $mobile) {
+        justify-content: center;
+    }
+
+    &._active span {
+        transform: translateY(0%);
+    }
+
+    span {
+        text-transform: uppercase;
+        transform: translateY(100%);
+        transition: $anm-transition;
+    }
+}

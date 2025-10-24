@@ -1,0 +1,99 @@
+@use "../base/variables" as *;
+
+.preloader {
+    text-transform: uppercase;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $color-bg-preloader;
+    z-index: 10000;
+    transition: 0.5s;
+    transform: translateY(0);
+
+    &._hidden {
+        transform: translateY(-100%);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .title {
+        flex: 1;
+        font-size: 26px;
+        width: 50%;
+        letter-spacing: 14px;
+        padding-bottom: 30px;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+
+        &:before {
+            content: '';
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            background: $color-line;
+            width: 1px;
+            height: 0;
+            transition: 0.35s ease-in;
+        }
+    }
+
+    &._active {
+        .title:before {
+            height: 100%;
+        }
+
+        .text-wrapper:before {
+            width: 100%;
+        }
+    }
+
+    .text-wrapper {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: $color-line;
+            height: 1px;
+            width: 0;
+            transition: 0.35s ease-in;
+        }
+
+        .text {
+            font-size: 110px;
+            line-height: 76px;
+            width: 100%;
+            padding: 39px 0 74px;
+            text-align: justify;
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                flex: 4;
+                text-align: center;
+                will-change: contents;
+
+                &:first-child {
+                    flex: 3;
+                    text-align: left;
+                }
+
+                &:last-child {
+                    flex: 3;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

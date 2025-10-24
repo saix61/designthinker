@@ -1,0 +1,17 @@
+@use "../../base/variables" as *;
+
+.author {
+    width: 173px;
+    height: 173px;
+    border-radius: 100%;
+    border: 12px solid $color-gray;
+    background: $color-gray;
+    margin: 40px 0;
+
+    @media (max-width: $mobile) {
+        width: 137px;
+        height: 137px;
+        margin: 32px 0;
+        border-width: 8px;
+    }
+}

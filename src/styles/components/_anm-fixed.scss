@@ -1,0 +1,53 @@
+@use "../base/variables" as *;
+
+.anm-fixed {
+    &._center &__content {
+        position: fixed;
+        top: calc(50% + 6px);
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-50%);
+        z-index: -1;
+
+        @media (max-width: $mobile) {
+            position: relative;
+            top: 0;
+            transform: none;
+        }
+
+        &>* {
+            opacity: 0.1;
+            font-size: min(250px, 13vw);
+            line-height: 1;
+            transition: transform 1s ease-out, opacity 1s ease-out;
+
+            @media (max-width: $mobile) {
+                opacity: 1;
+                transform: none;
+                font-size: inherit;
+            }
+        }
+    }
+
+    &._fix-heading &__content {
+        position: absolute;
+        top: 280px;
+        bottom: 0;
+        margin: auto 0;
+        transform: translateY(0);
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $mobile) {
+            position: relative;
+            top: 0;
+            transform: none;
+        }
+    }
+
+    &__content>* {
+        transition: transform 0.35s, opacity 0.35s;
+    }
+}

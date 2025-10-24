@@ -1,0 +1,159 @@
+@use "../base/variables" as *;
+
+// example секция
+
+.example {
+    text-transform: uppercase;
+    padding-top: 180px;
+    padding-bottom: 110px;
+
+    @media (max-width: $mobile) {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    &__row {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 101px;
+        gap: 16px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 75px;
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 18px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 14px;
+            left: 8px;
+            width: 0;
+            padding-bottom: 16px;
+            transition-delay: 0s;
+            overflow: hidden;
+
+            @media (max-width: $tablet) {
+                top: 6px;
+            }
+
+            &._active {
+                width: 113px;
+                transition-delay: 0.15s;
+            }
+
+            svg {
+                float: right;
+            }
+
+            @media (max-width: $mobile) {
+                display: none;
+            }
+        }
+
+        .heading {
+            color: #fafafa;
+            font-size: 55px;
+            line-height: 131%;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            @media (max-width: $tablet) {
+                font-size: 40px;
+            }
+
+            @media (max-width: 1060px) {
+                align-items: center;
+                width: 100%;
+            }
+
+            @media (max-width: $mobile) {
+                font-size: 20px;
+            }
+
+            div:not(._active) {
+                span {
+                    transition-delay: 0s;
+                }
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto 0;
+        max-height: 100%;
+        transform: translateX(50%);
+        transition: $anm-transition;
+
+        &._active {
+            transform: translateX(0);
+        }
+
+        @media (max-width: 1060px) {
+            display: none;
+        }
+    }
+
+    .underline-content {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 39px;
+        margin: 0 auto;
+
+        @media (max-width: $mobile) {
+            padding-top: 18px;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .horizontal-line {
+            top: 0;
+            bottom: auto;
+        }
+
+        .small {
+            color: #fafafa;
+            font-size: 20px;
+            line-height: 131%;
+
+            @media (max-width: $mobile) {
+                font-size: 18px;
+            }
+        }
+
+        .descript {
+            color: #fafafa;
+            font-family: $font-family-second;
+            font-weight: 300;
+            line-height: 145%;
+            font-size: 18px;
+            width: 526px;
+
+            @media (max-width: $tablet) {
+                font-size: 16px;
+                width: 470px;
+            }
+
+            @media (max-width: $mobile) {
+                font-size: 10px;
+                width: 100%;
+                text-align: center;
+            }
+
+            b {
+                font-weight: 700;
+            }
+        }
+    }
+}

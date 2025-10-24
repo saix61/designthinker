@@ -1,0 +1,39 @@
+@use '../../base/variables' as *;
+
+.hero-video {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    overflow: hidden;
+    height: 0;
+    transition: $anm-transition;
+
+    @media (max-width: $mobile) {
+        position: relative;
+        height: auto;
+        overflow: visible;
+    }
+
+    &._active {
+        height: 100%;
+
+        @media (max-width: $mobile) {
+            height: auto;
+        }
+    }
+
+    video {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        inset: -100%;
+        margin: auto;
+
+        @media (max-width: $mobile) {
+            position: relative;
+            inset: 0;
+            width: 100vw;
+            margin: 24px calc($side-screen-space-sm * -1) 14px;
+        }
+    }
+}

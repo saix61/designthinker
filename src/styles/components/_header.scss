@@ -1,0 +1,65 @@
+@use "../base/variables" as *;
+
+// Шапка сайта
+.header {
+    text-transform: uppercase;
+
+    & .container {
+        position: fixed;
+        top: 42px;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgba(239, 239, 239, 0.07);
+        border-radius: 20px;
+        backdrop-filter: blur(102.7px);
+        background: rgba(255, 255, 255, 0.04);
+        padding: 29px 32px 28px;
+        gap: 18px;
+
+        @media (max-width: $mobile) {
+            top: 16px;
+            padding: 15px 24px 14px;
+        }
+    }
+
+    &__logo {
+        color: $text-secondary;
+        font-size: 20px;
+        line-height: 122%;
+        margin-right: 10.5%;
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+
+        &_mobile {
+            display: none;
+
+            @media (max-width: $mobile) {
+                display: block;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+
+        @media (max-width: $mobile) {
+            gap: 18px;
+        }
+    }
+
+    &__contact {
+        margin-left: auto;
+
+        @media (max-width: $mobile) {
+            margin-left: 0;
+        }
+    }
+}

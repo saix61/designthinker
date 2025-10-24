@@ -1,0 +1,47 @@
+@use "../base/variables" as *;
+@use "../components/portfolio/portfolio-list";
+
+// portfolio секция
+.portfolio {
+    position: relative;
+    border-top: 1px solid $color-line;
+
+    .heading {
+        height: 267px;
+        font-size: 100px;
+        line-height: 131%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: $mobile) {
+            height: auto;
+            font-size: 20px;
+            padding: 16px 0;
+        }
+    }
+
+    .list {
+        .draw {
+            height: 50px;
+            background: #000;
+
+            &03 {
+                background-image: url("");
+            }
+
+            &04 {
+                background-image: url("../../img/portfolio04and1920.jpg");
+            }
+
+            &05 {
+                background-image: url("../../img/portfolio05and1920.jpg");
+            }
+
+            &06 {
+                background-image: url("../../img/portfolio06and1920.jpg");
+            }
+        }
+    }
+}
