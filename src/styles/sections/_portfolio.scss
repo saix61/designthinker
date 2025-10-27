@@ -8,7 +8,7 @@
     z-index: 1;
 
     .heading {
-        height: 267px;
+        height: 356px;
         font-size: 100px;
         line-height: 131%;
         text-align: center;
@@ -27,10 +27,10 @@
         position: relative;
         margin-top: -267px;
         transform: translateY(267px);
-        transition: $anm-transition;
+        transition: $anm-p-transition;
 
         &._move {
-            transform: translateY(40px);
+            transform: translateY(-30px);
         }
 
         @media (max-width: $mobile) {

@@ -160,6 +160,12 @@ function startFirstView() {
                 }
             }
             else {
+                if (element.classList.contains('anm-slide-up')) {
+                    element.classList.remove('_active');
+                    element.classList.remove('_delay-disabled');
+                    element.closest('.anm-fixed').classList.remove('_active');
+                    element.closest('.anm-fixed').classList.remove('_delay-disabled');
+                }
                 if (document.querySelector('.hero').getBoundingClientRect().top > -100 && document.querySelector('.hero').classList.contains('_fade')) {
                     document.querySelector('.hero').classList.remove('_fade');
                 }
