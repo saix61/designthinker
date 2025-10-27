@@ -9,7 +9,7 @@
     justify-content: center;
     background: $color-bg-preloader;
     z-index: 10000;
-    transition: 0.5s;
+    transition: $anm-preloader-transition;
     transform: translateY(0);
 
     &._hidden {

@@ -133,7 +133,9 @@ function startFirstView() {
         elements.forEach(element => {
             if (isElementInViewportCenter(element)) {
                 element.classList.add('_center');
-                element.classList.add('_delay-disabled');
+                if (!element.classList.contains('_not-delay-disabled')) {
+                    element.classList.add('_delay-disabled');
+                }
                 if (element.classList.contains('portfolio-list')) {
                     element.closest('.portfolio').querySelector('.anm-fixed').classList.add('_fix-heading')
                 }
@@ -163,8 +165,8 @@ function startFirstView() {
                 if (element.classList.contains('anm-slide-up')) {
                     element.classList.remove('_active');
                     element.classList.remove('_delay-disabled');
-                    element.closest('.anm-fixed').classList.remove('_active');
-                    element.closest('.anm-fixed').classList.remove('_delay-disabled');
+                    element.closest('.anm-fixed')?.classList.remove('_active');
+                    element.closest('.anm-fixed')?.classList.remove('_delay-disabled');
                 }
                 if (document.querySelector('.hero').getBoundingClientRect().top > -100 && document.querySelector('.hero').classList.contains('_fade')) {
                     document.querySelector('.hero').classList.remove('_fade');
