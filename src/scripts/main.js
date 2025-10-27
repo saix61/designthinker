@@ -102,7 +102,7 @@ function startFirstView() {
 
     function isTriggeredCaseOne(element) {
         const rect = element.getBoundingClientRect();
-        return rect.top >= 0 && rect.top <= window.innerHeight - rect.height
+        return rect.top <= window.innerHeight - rect.height
     }
 
     function isElementInViewportCenter(element) {
@@ -113,7 +113,7 @@ function startFirstView() {
         const elementCenterY = rect.top + (rect.height + window.innerHeight) / 2;
 
         // Проверяем, попадает ли центр элемента в видимую область
-        return elementCenterY >= 0 && elementCenterY <= viewportHeight;
+        return elementCenterY <= viewportHeight;
     }
 
     // Функция для обновления классов у элементов
@@ -124,6 +124,7 @@ function startFirstView() {
         elements.forEach(element => {
             if (isElementInViewportCenter(element)) {
                 element.classList.add('_center');
+                element.classList.add('_delay-disabled');
                 if (element.classList.contains('portfolio-list')) {
                     element.closest('.portfolio').querySelector('.anm-fixed').classList.add('_fix-heading')
                 }
@@ -138,8 +139,15 @@ function startFirstView() {
                 element.classList.add('_active');
 
                 startCounter()
-            } else {
-                element.classList.remove('_active');
+
+                if (element.classList.contains('anm-fixed')) {
+                    document.querySelector('.hero').classList.add('_fade');
+                }
+            }
+            else {
+                if (element.classList.contains('anm-fixed')) {
+                    document.querySelector('.hero').classList.remove('_fade');
+                }
             }
         });
     }

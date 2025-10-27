@@ -84,14 +84,11 @@
         }
 
         .text {
-            max-width: 470px;
-
             @media (max-width: $tablet) {
                 flex: 2;
             }
 
             @media (max-width: $mobile) {
-                max-width: 100%;
                 flex: 100%;
             }
 
@@ -100,6 +97,8 @@
                 font-weight: 300;
                 font-size: 15px;
                 line-height: 145%;
+                max-width: 470px;
+                margin-left: auto;
 
                 @media (max-width: $tablet) {
                     font-size: 14px;
@@ -107,6 +106,8 @@
 
                 @media (max-width: $mobile) {
                     font-size: 10px;
+                    max-width: 100%;
+                    margin-left: auto;
                 }
             }
         }

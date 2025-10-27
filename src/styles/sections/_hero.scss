@@ -23,10 +23,29 @@
         max-height: inherit;
     }
 
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: #000;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.35s ease;
+    }
+
+    &._fade {
+        &::after {
+            opacity: 0.5;
+            visibility: visible;
+            transition: 0.5s linear;
+        }
+    }
+
     &__fixed {
-        max-height: calc(962px - 128px);
+        max-height: calc(962px - $header-top-space);
         position: fixed;
-        top: 128px;
+        top: $header-top-space;
         left: 0;
         right: 0;
         bottom: 0;
@@ -34,7 +53,7 @@
         flex-direction: column;
 
         @media (max-width: $tablet) {
-            max-height: calc(730px - 128px);
+            max-height: calc(730px - $header-top-space);
         }
 
         @media (max-width: $mobile) {
