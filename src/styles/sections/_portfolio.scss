@@ -5,6 +5,7 @@
 .portfolio {
     position: relative;
     border-top: 1px solid $color-line;
+    z-index: 1;
 
     .heading {
         height: 267px;
@@ -22,25 +23,22 @@
         }
     }
 
-    .list {
-        .draw {
-            height: 50px;
-            background: #000;
+    &-list {
+        position: relative;
+        margin-top: -267px;
+        transform: translateY(267px);
+        transition: $anm-transition;
 
-            &03 {
-                background-image: url("");
-            }
+        &._move {
+            transform: translateY(40px);
+        }
 
-            &04 {
-                background-image: url("../../img/portfolio04and1920.jpg");
-            }
+        @media (max-width: $mobile) {
+            margin-top: 0;
+            transform: translateY(0);
 
-            &05 {
-                background-image: url("../../img/portfolio05and1920.jpg");
-            }
-
-            &06 {
-                background-image: url("../../img/portfolio06and1920.jpg");
+            &._move {
+                transform: translateY(0);
             }
         }
     }

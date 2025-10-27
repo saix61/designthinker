@@ -119,10 +119,10 @@
         align-items: center;
         width: 100%;
         padding: 48px 16px;
-        background-color: $color-button;
+        background-color: $color-dark;
         font-size: 24px;
         text-transform: uppercase;
-        border: 1px solid $color-button-border;
+        border: 1px solid $color-line;
         border-radius: 19px;
 
         @media (max-width: $tablet) {

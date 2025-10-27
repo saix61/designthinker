@@ -125,7 +125,7 @@ p {
     bottom: 0;
     width: 0;
     height: 1px;
-    background: $color-horizontal-line;
+    background: $color-line;
     transition: 0.5s;
 
     &::after {
@@ -136,7 +136,7 @@ p {
         width: 0;
         height: 1px;
         transition: $anm-transition;
-        background: $color-horizontal-line-hovered;
+        background: $color-line-hovered;
     }
 }
 

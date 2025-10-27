@@ -1,39 +1,48 @@
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Предотвращаем стандартное поведение ссылки
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+
+        const offset = 124; // отступ в пикселях
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+
+        window.scrollTo({
+            top: targetPosition,
             behavior: 'smooth'
         });
     });
 });
 
 
+
 function startFirstView() {
     function typeWriter(elementId, speed) {
         const element = document.querySelector(elementId);
-        console.log(element);
-
         if (!element) return;
 
-        // Находим родительский элемент (если необходимо)
         const parent = element.parentNode;
+        const nextP = parent.querySelector('p:nth-of-type(2)');
+        if (!nextP) return;
 
-        // Находим следующий <p> элемент
-        const nextP = parent.querySelector('p:nth-of-type(2)'); // Предполагаем, что следующий элемент - это <p>
-        let text = nextP.textContent; // Получаем текст из следующего <p> элемента
-
+        let text = nextP.textContent;
         let index = 0;
 
-        function printChar() {
+        // Очистка содержимого перед началом анимации
+        element.innerHTML = '';
+
+        // Используем setInterval для равномерного вывода
+        const interval = setInterval(() => {
             if (index < text.length) {
                 element.innerHTML += text.charAt(index);
                 index++;
-                setTimeout(printChar, speed);
+            } else {
+                // Завершаем интервал, когда текст полностью выведен
+                clearInterval(interval);
             }
-        }
-
-        printChar();
+        }, speed);
     }
+
 
     // Запускаем эффект (скорость — в миллисекундах)
     setTimeout(() => {
@@ -128,10 +137,16 @@ function startFirstView() {
                 if (element.classList.contains('portfolio-list')) {
                     element.closest('.portfolio').querySelector('.anm-fixed').classList.add('_fix-heading')
                 }
+                if (element.classList.contains('anm-fixed')) {
+                    document.querySelector('.portfolio-list').classList.add('_move');
+                }
             } else {
                 element.classList.remove('_center');
                 if (element.classList.contains('portfolio-list')) {
                     element.closest('.portfolio').querySelector('.anm-fixed').classList.remove('_fix-heading')
+                }
+                if (element.classList.contains('anm-fixed')) {
+                    document.querySelector('.portfolio-list').classList.remove('_move');
                 }
             }
 
@@ -140,12 +155,12 @@ function startFirstView() {
 
                 startCounter()
 
-                if (element.classList.contains('anm-fixed')) {
+                if (element.classList.contains('anm-fixed') && !document.querySelector('.hero').classList.contains('_fade') && document.querySelector('.hero').getBoundingClientRect().top < -100) {
                     document.querySelector('.hero').classList.add('_fade');
                 }
             }
             else {
-                if (element.classList.contains('anm-fixed')) {
+                if (document.querySelector('.hero').getBoundingClientRect().top > -100 && document.querySelector('.hero').classList.contains('_fade')) {
                     document.querySelector('.hero').classList.remove('_fade');
                 }
             }
@@ -231,6 +246,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     preloader.classList.add('_hidden');
                     document.body.style.overflow = '';
+                    window.scrollTo(0, 0);
+
                     setTimeout(() => {
                         startFirstView()
                     }, 500);
@@ -248,5 +265,5 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             animate();
         }, 100);
-    }, 100);
+    }, 500);
 });

@@ -24,13 +24,18 @@
 
     .title {
         flex: 1;
-        font-size: 26px;
         width: 50%;
+        font-size: 26px;
         letter-spacing: 14px;
         padding-bottom: 30px;
         display: flex;
         align-items: flex-end;
         position: relative;
+
+        @media (max-width: $mobile) {
+            font-size: 18px;
+            letter-spacing: 9px;
+        }
 
         &:before {
             content: '';
@@ -78,6 +83,16 @@
             text-align: justify;
             display: flex;
             justify-content: space-between;
+
+            @media (max-width: $tablet) {
+                font-size: 60px;
+                padding: 32px 0;
+            }
+
+            @media (max-width: $mobile) {
+                font-size: 26px;
+                padding: 16px 0;
+            }
 
             span {
                 flex: 4;
