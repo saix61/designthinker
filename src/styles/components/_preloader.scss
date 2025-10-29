@@ -11,9 +11,15 @@
     z-index: 10000;
     transition: $anm-preloader-transition;
     transform: translateY(0);
+    overflow: hidden;
 
     &._hidden {
         transform: translateY(-100%);
+
+        .container {
+            transform: translateY(100%);
+            transition: $anm-preloader-transition;
+        }
     }
 
     .container {
