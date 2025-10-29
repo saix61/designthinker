@@ -258,8 +258,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     setTimeout(() => {
                         startFirstView()
-                    }, 500);
-                }, 1000);
+                    }, 1000);
+                }, 800);
             }
         }
 
