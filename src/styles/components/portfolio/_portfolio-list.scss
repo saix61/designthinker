@@ -35,4 +35,78 @@
             }
         }
     }
+
+    .draw06 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            backdrop-filter: blur(40px);
+            background: #3E3E3E40;
+            z-index: -1;
+        }
+
+        img {
+            position: absolute;
+            inset: 0;
+            transform: scale(1) rotate(0deg);
+            transition: $anm-transition;
+            z-index: -2;
+        }
+
+        &:hover img {
+            transform: scale(0.8) rotate(30deg);
+        }
+
+        span {
+            font-size: 22px;
+            line-height: 131%;
+            margin-right: 10px;
+
+            @media (max-width: $tablet) {
+                font-size: 15px;
+                margin-right: 7px;
+            }
+
+            @media (max-width: $mobile) {
+                font-size: 8px;
+                margin-right: 2px;
+            }
+        }
+
+        .plus-icon {
+            height: 18px;
+
+            svg {
+                height: 26px;
+                padding-bottom: 8px;
+            }
+
+            @media (max-width: $tablet) {
+                height: 11px;
+
+                svg {
+                    height: 17px;
+                    padding-bottom: 6px;
+                }
+            }
+
+            @media (max-width: $mobile) {
+                height: 6px;
+
+                svg {
+                    height: 8px;
+                    padding-bottom: 2px;
+                }
+            }
+        }
+    }
 }

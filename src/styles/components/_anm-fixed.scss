@@ -10,7 +10,7 @@
         align-items: center;
         justify-content: center;
         transform: translateY(-50%);
-        transition: $anm-p-transition;
+        transition: $anm-portfolio-transition;
 
         @media (max-width: $mobile) {
             top: 0;
@@ -36,7 +36,7 @@
             opacity: 0.1;
             font-size: min(250px, 13vw);
             line-height: 1;
-            transition: transform $anm-p-transition, opacity $anm-p-transition;
+            transition: transform $anm-portfolio-transition, opacity $anm-portfolio-transition;
 
             @media (max-width: $mobile) {
                 opacity: 1;
@@ -45,7 +45,7 @@
             }
 
             span {
-                transition: $anm-p-transition;
+                transition: $anm-portfolio-transition;
             }
         }
     }

@@ -58,10 +58,27 @@
                     margin-bottom: 5px;
                 }
 
+                .plus-icon {
+                    height: 68px;
+
+                    @media (max-width: $mobile) {
+                        height: 24px;
+                    }
+
+                    svg {
+                        height: 80px;
+                        padding-bottom: 12px;
+
+                        @media (max-width: $mobile) {
+                            height: 30px;
+                            padding-bottom: 6px;
+                        }
+                    }
+                }
+
                 svg {
                     width: 68px;
                     margin-left: 22px;
-                    transition: 0.15s;
 
                     @media (max-width: $mobile) {
                         width: 24px;

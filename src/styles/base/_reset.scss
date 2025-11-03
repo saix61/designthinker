@@ -118,6 +118,20 @@ p {
     }
 }
 
+.plus-icon {
+    overflow: hidden;
+
+    svg {
+        display: block;
+        transition: $anm-plus-icon-transition;
+        transform: translateY(0);
+    }
+}
+
+.plus-icon-wrapper:hover .plus-icon svg {
+    transform: translateY(-100%);
+
+}
 
 .horizontal-line {
     position: absolute;

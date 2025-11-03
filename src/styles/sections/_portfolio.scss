@@ -24,10 +24,11 @@
     }
 
     &-list {
+        text-transform: uppercase;
         position: relative;
         margin-top: -267px;
         transform: translateY(267px);
-        transition: $anm-p-transition;
+        transition: $anm-portfolio-transition;
 
         &._move {
             transform: translateY(-30px);
