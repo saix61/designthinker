@@ -52,6 +52,8 @@
             z-index: 0;
             background-image: url("../../img/figma1920.jpg");
             overflow: hidden;
+            background-position: center center;
+            background-size: cover;
 
             @media (max-width: $tablet) {
                 min-height: inherit;
